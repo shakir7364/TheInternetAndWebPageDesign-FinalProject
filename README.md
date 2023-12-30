@@ -1,2 +1,4 @@
-# TheInternetAndWebPageDesign-FinalProject
- The Internet And Web Page Design Final Project
+# The Internet And Web Page Design Final Project
+This is the final project for the class and the assignment was to create a web store page using as much of what we learned in class as we could and at least one new topic that was not covered in class. Highlights of this website include a link to the home page using a logo, a navigation list to the games and accessories item pages, a JavaScript powered slideshow of cookies, and a JavaScript powered showcase of two store items that take you to their pages when clicked. Feel free to check out the rest of the site too.
+
+To view the website yourself, download the AssignmentFiles.rar file and run the index.html file.

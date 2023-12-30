@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styleSheet.css">
+		<style>
+			h1 {color: darkred}
+			#newsLetter {color: black; background-color: red; float: right}
+			.mySlides{display: none}
+			.slideshow-container
+			{
+				float: right;
+				margin-right: 50px;
+				position: relative;
+			}
+			.prev, .next
+			{
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				padding: 16px;
+				margin-top: -22px;
+				color: white;
+				font-weight: bold;
+				font-size: 18px;
+				transition: 0.6s ease;
+				border-radius: 0 3px 3px 0;
+			}
+			.next
+			{
+				right: 0;
+				border-radius: 3px 0 0 3px;
+			}
+			.prev:hover, .next:hover
+			{
+				background-color: #f1f1f1;
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="index.html"><img src="Logo.PNG" alt="picture of store logo"></img></a>
+		<h1>
+			Generic Game Store Home Page
+		</h1>
+		<div id="newsLetter">
+			<h2>Register For Our Newsletter: </h2>
+			<form method="get">
+			E-mail: <input type="text" name="email" id="email"><br><br>
+			<input type="submit" value="Sign Me Up!">&nbsp
+			<input type="reset" value="Reset">
+			</form>
+		</div>
+		<div class="slideshow-container">
+			<div class="mySlides">
+				<img style="width:100%" title="Cookies!" src="cookies.jpg" alt="picture of cookies"></img>
+			</div>
+			<div class="mySlides">
+				<img style="max" title="Cookies!" src="cookies2.jpg" alt="picture of cookies"></img>
+			</div>
+			<div class="mySlides">
+				<img style="width:100%" title="Cookies!" src="cookies3.jpg" alt="picture of cookies"></img>
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<ul>
+			<li><a style="background-color:red;" href="games.html"> Games</a></li>
+			<li><a style="background-color:red;" href="accessories.html"> Accessories</a></li>
+		</ul>
+		<h1> Top Sellers: </h1>
+		<a id="topSellerLink" href="games.html"><img id="topSellerImg" src="NarutoShinobiStriker.png" alt="picture of top game"></img></a>
+		<p><button type="button" onclick="nextPic()">Next</button></p>
+		<h1> Website Spotlight: </h1>
+		<h1><a href="https://www.nintendo.com/"> Nintendo </a></h1>
+		
+		<script>
+			var pic = true;
+			var slideIndex = 0;
+			var slides = document.getElementsByClassName("mySlides");
+			plusSlides(0);
+			
+			function plusSlides(n)
+			{
+				slides[slideIndex].style.display = "none";
+				slideIndex += n;
+				if(slideIndex < 0)
+				{
+					slideIndex = slides.length - 1;
+				}
+				if(slideIndex > slides.length - 1)
+				{
+					slideIndex = 0;
+				}
+				slides[slideIndex].style.display = "block";
+			}
+			
+			function nextPic()
+			{
+				if(pic == true)
+				{
+					document.getElementById("topSellerImg").src = "GamingHeadset.jpg";
+					document.getElementById("topSellerLink").href = "accessories.html";
+					pic = false;
+				}
+				else
+				{
+					document.getElementById("topSellerImg").src = "NarutoShinobiStriker.png";
+					document.getElementById("topSellerLink").href = "games.html";
+					pic = true;
+				}
+			}
+		</script>
+	</body>
+</html>
